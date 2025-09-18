@@ -22,10 +22,11 @@ void loop() {
 }
 
 
+
 /**
  Sequencial de Leds - inverso
   @author Felippe Camargo
-
+*/
 void setup() {
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
@@ -38,10 +39,14 @@ void setup() {
 }
 
 void loop() {
-  for(int i = 8; i > 0; i--){
+  for(int i = 2; i < 8; i++){
     digitalWrite(i, HIGH);
-    digitalWrite(i + 1, LOW);
-    delay(600);
+    digitalWrite(i, LOW);
+    delay(100);
+  }
+   for(int c = 7; c > 1; c--){
+    digitalWrite(c, HIGH);
+    digitalWrite(c, LOW);
+    delay(100);
   }
 }
-*/
